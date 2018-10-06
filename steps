@@ -2,6 +2,8 @@
 
 #Kubernetes Installation pre-requisites:
 
+########
+
 #Reference URL: http://kubecloud.io/setup-ha-k8s-kops/
 
 1. Kops 						: The utility used to install the kubernetes cluster
