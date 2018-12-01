@@ -1,0 +1,64 @@
+
+
+
+
+###############
+#!/bin/bash
+yum install httpd php php-mysql -y
+cd /var/www/html
+echo "healthy" > healthy.html
+wget https://wordpress.org/latest.tar.gz
+tar -xzf latest.tar.gz
+cp -r wordpress/* /var/www/html/
+rm -rf wordpress
+rm -rf latest.tar.gz
+chmod -R 755 wp-content
+chown -R apache:apache wp-content
+wget https://s3.amazonaws.com/bucketforwordpresslab-donotdelete/htaccess.txt
+mv htaccess.txt .htaccess
+chkconfig httpd on
+################
+#!/bin/bash
+yum install httpd php php-mysql  -y
+yum update -y
+aws s3 cp s3://testbucket2018-04/index.html /var/www/html/
+aws s3 cp s3://testbucket2018-04/healthcheck.html /var/www/html/
+aws s3 cp s3://testbucket2018-04/connect_to_db.php /var/www/html/  
+echo "<?php phpinfo();?>" > /var/www/html/index.php
+cd /var/www/html  
+wget https://s3.amazonaws.com/testbucket2018-04/connect_to_db.php
+service httpd start
+chkconfig httpd on
+####################index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title> Hi Welcome to AWS CSA Course</title>
+</head>
+<body>
+
+<h1>You are learning Auto Scalling and Loadbalancing on AWS platform</h1
+
+</body>
+</html>
+###################
+#####################connect_to_db_.php############
+<?php 
+$username = "mysqldb01"; 
+$password = "mysqldb01"; 
+$hostname = "mysqldb01.cqsib8vfje1t.ap-northeast-2.rds.amazonaws.com"; 
+$dbname = "mysqldb01";
+
+//connecting to the database
+$dbhandle = mysql_connect($hostname, $username, $password) or die("Unable to connect to MySQL"); 
+echo "Connected to MySQL using username - $username, password - $password, host - $hostname<br>"; 
+$selected = mysql_select_db("$dbname",$dbhandle)   or die("Unable to connect to MySQL DB - check the database name and try again."); 
+?>
+################################
+#!/bin/bash
+yum install httpd -y
+aws s3 cp s3://testbucket2018-04/index.html /var/www/html/
+aws s3 cp s3://testbucket2018-04/healthcheck.html /var/www/html/
+service httpd start
+chkconfig httpd on
+#########################
