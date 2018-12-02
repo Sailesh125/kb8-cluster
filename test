@@ -1,6 +1,30 @@
+RDS MultiAZ Deployment 
 
+Go to VPC and create 2 Security Group
 
+1 rdsDG
+80,3306
 
+2.webserverDMZ
+80,22,3306
+############
+#change the bucket name in line number 7,8,9,12
+#create three file and upload in the bucket
+#copy the scripts in boot strap script 
+#!/bin/bash
+yum install httpd php php-mysql mysql telnet  -y
+yum update -y
+aws s3 cp s3://testbucket2018-04/index.html /var/www/html/
+aws s3 cp s3://testbucket2018-04/healthcheck.html /var/www/html/
+aws s3 cp s3://testbucket2018-04/connect_to_db.php /var/www/html/  
+echo "<?php phpinfo();?>" > /var/www/html/index.php
+cd /var/www/html  
+wget https://s3.amazonaws.com/testbucket2018-04/connect_to_db.php
+service httpd start
+chkconfig httpd on
+####################################3
+telnet mysqldb01.cqsib8vfje1t.ap-northeast-2.rds.amazonaws.com 3306
+mysql -u mysqldb01 -h  mysqldb01.cqsib8vfje1t.ap-northeast-2.rds.amazonaws.com -p
 
 ###############
 #!/bin/bash
@@ -18,17 +42,6 @@ wget https://s3.amazonaws.com/bucketforwordpresslab-donotdelete/htaccess.txt
 mv htaccess.txt .htaccess
 chkconfig httpd on
 ################
-#!/bin/bash
-yum install httpd php php-mysql  -y
-yum update -y
-aws s3 cp s3://testbucket2018-04/index.html /var/www/html/
-aws s3 cp s3://testbucket2018-04/healthcheck.html /var/www/html/
-aws s3 cp s3://testbucket2018-04/connect_to_db.php /var/www/html/  
-echo "<?php phpinfo();?>" > /var/www/html/index.php
-cd /var/www/html  
-wget https://s3.amazonaws.com/testbucket2018-04/connect_to_db.php
-service httpd start
-chkconfig httpd on
 ####################index.html
 <!DOCTYPE html>
 <html>
