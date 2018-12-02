@@ -59,6 +59,7 @@ $selected = mysql_select_db("$dbname",$dbhandle)   or die("Unable to connect to 
 yum install httpd -y
 aws s3 cp s3://testbucket2018-04/index.html /var/www/html/
 aws s3 cp s3://testbucket2018-04/healthcheck.html /var/www/html/
+aws s3 cp s3://testbucket2018-04/connect_to_db.php /var/www/html/  
 service httpd start
 chkconfig httpd on
 #########################
