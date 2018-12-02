@@ -22,7 +22,7 @@ service httpd restart
 chkconfig httpd on
 ####################################3
 telnet mysqldb01.cqsib8vfje1t.ap-northeast-2.rds.amazonaws.com 3306
-mysql -u mysqldb01 -h  mysqldb01.cqsib8vfje1t.ap-northeast-2.rds.amazonaws.com -p
+mysql -u mysqldb01 -h mysqldb01.cqsib8vfje1t.ap-northeast-2.rds.amazonaws.com -p
 
 ###############
 #!/bin/bash
@@ -82,3 +82,6 @@ aws s3 cp s3://testbucket2018-04/connect_to_db.php /var/www/html/
 service httpd start
 chkconfig httpd on
 #########################
+
+
+http://www.kolyanchaltyres.com/
