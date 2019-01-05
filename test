@@ -85,3 +85,10 @@ chkconfig httpd on
 
 
 http://www.kolyanchaltyres.com/
+
+
+#!/bin/bash
+yum install httpd -y
+aws s3 cp s3://2019-satyam/index.html /var/www/html/
+service httpd start
+chkconfig httpd on
