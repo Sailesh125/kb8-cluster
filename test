@@ -92,3 +92,7 @@ yum install httpd -y
 aws s3 cp s3://2019-satyam/index.html /var/www/html/
 service httpd start
 chkconfig httpd on
+
+
+
+http://myclb0001-843999720.ap-northeast-1.elb.amazonaws.com/
