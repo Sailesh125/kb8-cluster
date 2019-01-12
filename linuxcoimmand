@@ -1,0 +1,28 @@
+ 100  adduser satyam
+  101  adduser mashesh
+  102  passwd mashesh
+  103  groupadd admins
+  104  usermod -aG admins mashesh
+  105  cat /etc/group
+  106  adduser sohan
+  107  usermod -aG admins sohan
+  108  cat /etc/group
+  109  clea
+  110  clear
+  111  cd /etc/yum.repos.d/
+  112  ls -ltr
+  113  yum repolist
+  114  grep -r enabled *
+  115  cat amzn-main.repo
+  116  yum repolist
+  117  yum install http -y
+  118  yum install httpd -y
+  119  rpm -qa | grep httpd
+  120  rpm -qa | grep vsftpd
+  121  yum install vsftpd  -y
+  122  rpm -qa | grep vsftpd
+  123  ym history
+  124  yum history
+  125  yum undo history 5
+  126  yum history undo 5
+  127  history
