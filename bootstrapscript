@@ -3,3 +3,4 @@ yum install httpd -y
 aws s3 cp s3://<yourbucketname>/index.html /var/www/html/
 aws s3 cp s3://<yourbucketname>/healthcheck.html /var/www/html/
 service httpd restart
+chkconfig httpd on
