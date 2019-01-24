@@ -26,3 +26,79 @@
   125  yum undo history 5
   126  yum history undo 5
   127  history
+Class 2
+===========
+   1  yum install sos -y
+    2  sosreport
+    3  cd /var/tmp
+    4  ls -ltr
+    5  cat /etc/redhat-release
+    6  mkdr staym
+    7  echo $SHELL
+    8  cd..
+    9  cd ..
+   10  pwd
+   11  pwd;cd /home/satyam;touch linux;mkdir unix
+   12  history
+    1  adduser satyam
+    2  cd /home
+    3  ls -ltr
+    4  cd satyam
+    5  ls -la
+    6  ls
+    7  touch a b c h jj jjj kkkk
+    8  ls
+    9  ls -ll
+   10  ls -ltr
+   11  ls -la
+   12  cat .bash_profile
+   13  evn
+   14  env
+   15  ls -la
+   16  ld -ld jjj
+   17  ls -ld jjj
+   18  df -h
+   19  rpm -qa |grep sos
+   20  yum install sos -y
+   21  yum install sos
+   22  yum install sos*
+   23  yum list sos
+   24  yum list sos*
+   25  touch satyam
+   26  md5sum satyam
+   27  man sosreport
+   28  man sos
+   29  man chmod
+   30  yum install sos
+   31  yum repolist
+   32  ls -ltr
+   33  wget https://rpmfind.net/linux/centos/7.6.1810/updates/x86_64/Packages/sos-3.6-11.el7.centos.noarch.rpm
+   34  ls -ltr
+   35  rpm -ivh sos-3.6-11.el7.centos.noarch.rpm
+   36  sosreport
+   37  uname -a
+   38  uname -r
+   39  df -h
+   40  free -m
+   41  uptime
+   42  cd
+   43   pwd;cd /home/satyam;touch linux;mkdir unix
+   44  ls -ltr
+   45   pwd;cd /home/satyam;touc linux;mkdir unix
+   46  adduser shivam; cd /home/shivam ; touch hello.txt
+   47  id shivam
+   48  cd /home
+   49  ls -ltr
+   50  cd shivam
+   51  ls -ltr
+   52  touch staym
+   53  cat > linux
+   54  cat linux
+   55  vi unix
+   56  cat unix
+   57  echo "hi i am good" > unix
+   58  cat unix
+   59  echo "hi i am good satym" >> unix
+   60  cat unix
+   61  touch rahu
+   62  ls -ld rahu
