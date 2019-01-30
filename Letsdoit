@@ -16,4 +16,28 @@ Default output format [None]: json
 make_bucket: satyam2051
 [root@ip-172-31-25-172 ~]#
 
-Chmod, Chown,Stickty bit, suid, sgid and Umask.
+Chmod, Chown,Stickty bit, suid, sgid and Umask
+
+#ps -ef
+#top
+#ps -ef | grep java
+
+Changing the priorty of PID from 0 to -10
+==========================================
+[root@ip-172-31-21-137 ec2-user]# renice -10 3726
+3726 (process ID) old priority 0, new priority -10
+
+
+What is INODE in Linux and how to check INode
+# df -iH
+Filesystem     Inodes IUsed IFree IUse% Mounted on
+devtmpfs         122k   281  122k    1% /dev
+tmpfs            127k     1  127k    1% /dev/shm
+tmpfs            127k   374  126k    1% /run
+tmpfs            127k    16  127k    1% /sys/fs/cgroup
+/dev/xvda1       4.2M   40k  4.2M    1% /
+tmpfs            127k     1  127k    1% /run/user/1000
+tmpfs            127k     1  127k    1% /run/user/0
+
+https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/
+https://tecadmin.net/understanding-linux-top-command-results-uses/
