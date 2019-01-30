@@ -41,3 +41,74 @@ tmpfs            127k     1  127k    1% /run/user/0
 
 https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/
 https://tecadmin.net/understanding-linux-top-command-results-uses/
+
+Comamnds from terminal
+=====================
+[root@ip-172-31-21-137 /]# history
+    1  clear
+    2  date
+    3  top
+    4  ps -ef
+    5  date &
+    6  ps -ef | grep 3429
+    7  date
+    8  date &
+    9  top &
+   10  ps -ef |grep 3434
+   11  kill -9 3434
+   12  ps -ef |grep 3434
+   13  top &
+   14  ps -ef | grep 3442
+   15  bg %3442
+   16  bg
+   17  man bg
+   18  bg
+   19  bg
+   20  ps -ef | grep ping
+   21  bg
+   22  kill -9 3469
+   23  bg
+   24  bg
+   25  exit
+   26  yum install httpd
+   27  ls -ltr
+   28  service httpd start &
+   29  jobs -l
+   30  ping google.com > satyam.txt
+   31  ping google.com > satyam.txt &
+   32  jobs -l
+   33  ps -ef | grep 3804
+   34  fg %3804
+   35  jobs
+   36  jobs -l
+   37  fg
+   38  fg 3804
+   39  jobs -l
+   40  man fg
+   41  ping google.com > satyam.txt &
+   42  jobs -l
+   43  fg 3834
+   44  fg %3834
+   45  jobs -l
+   46  yum install fg
+   47  ps -ef
+   48  ps -ef | grep 3834
+   49  top | grep 3834
+   50  renice -10 3726
+   51  df -h
+   52  df -Th
+   53  df -ThH
+   54  df -iH
+   55  c
+   56  cd
+   57  cd /
+   58  ls -ltr
+   59  #What is the differance bwt bin and sbin
+   60  ps -ef | grep httpd
+   61  ps 1
+   62   ps -ef
+   63  ps -ef | grep TTY
+   64  top
+   65  histroy
+   66  history
+
