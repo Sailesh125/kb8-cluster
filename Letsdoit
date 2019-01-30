@@ -1,0 +1,19 @@
+1. How can we upgrade java from 1.7 to 1.8 ?
+http://bhargavamin.com/how-to-do/setting-up-java-environment-variable-on-ec2/
+
+1. How to Set the default region on AWS.
+Create a role with s3 fullaccess and assign the same to ec2 instance
+create a user give admin access use his Access Key & Secret Access Key for setting default region on EC2
+=====================================
+[root@ip-172-31-25-172 ~]# aws configure
+AWS Access Key ID [None]: AKIAI7HRVOZ4NKTQ
+AWS Secret Access Key [None]: 0omB/abqnotosMicO/KgXjKa//OYJpjYW/qL
+Default region name [None]: ap-south-1
+Default output format [None]: json
+[root@ip-172-31-25-172 ~]#
+[root@ip-172-31-25-172 ~]#
+[root@ip-172-31-25-172 ~]# aws s3 mb s3://satyam2051
+make_bucket: satyam2051
+[root@ip-172-31-25-172 ~]#
+
+Chmod, Chown,Stickty bit, suid, sgid and Umask.
