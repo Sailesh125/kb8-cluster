@@ -1,0 +1,65 @@
+
+
+Create a VPC with a 10.0.0.0/16 CIDR block.
+==========================================
+aws ec2 create-vpc --cidr-block 10.0.0.0/16 
+
+Create two Subnet Under our custom VPC 
+======================================
+aws ec2 create-subnet --vpc-id vpc-99e344fd --cidr-block 10.0.1.0/24
+
+aws ec2 create-subnet --vpc-id vpc-99e344fd --cidr-block 10.0.2.0/24
+
+Create an Internet gateway.
+===========================
+aws ec2 create-internet-gateway
+
+Create a Elastic IP
+====================
+aws ec2 allocate-address --region us-east-1 --domain vpc
+
+Create a NAT gateway
+===================
+aws ec2 create-nat-gateway --subnet-id subnet-1a2b3c4d --allocation-id eipalloc-37fc1a52
+
+Attach the Internet gateway to your VPC.
+========================================
+aws ec2 attach-internet-gateway --vpc-id vpc-2f09a348 --internet-gateway-id igw-1ff7a07b
+
+
+Create two route table 
+====================== 
+
+aws ec2 create-route-table --vpc-id vpc-a01106c2 --tag publicroutetable
+
+aws ec2 create-route-table --vpc-id vpc-a01106c2 --tag privateroutetable
+
+
+For Public Subnet (Add Internet Gateway & Routetable to Subnet)
+===================
+aws ec2 create-route --route-table-id rtb-b86fe2dc --destination-cidr-block 0.0.0.0/0 --gateway-id igw-5d685a38
+aws ec2 associate-route-table --route-table-id rtb-b86fe2dc --subnet-id subnet-3b839262
+
+
+For Private Subnet (Add Nat Gateway to public subnet & Routetable to Subnet)
+==================
+aws ec2 create-route --route-table-id rtb-aabbccdd --destination-cidr-block 0.0.0.0/0 --nat-gateway-id nat-01234567890abcabc
+aws ec2 associate-route-table --route-table-id rtb-b86fe2dc --subnet-id subnet-3b839262
+
+
+Create Subnet for ec2 instance 
+==============================
+aws ec2 create-security-group --group-name MySecurityGroup --description "My security group"
+
+Add the rule to the security 
+============================
+aws ec2 authorize-security-group-ingress --group-id security_group_id --protocol tcp --port 22 --cidr cidr_ip_range
+
+Create Ec2 Instance in Public Subnet 
+====================================
+aws ec2 run-instances --image-id ami-0937dcc711d38ef3f --count 1 --instance-type t2.micro --key-name test-key --security-group-ids sg-af7a50c8 --subnet-id subnet-3b839262 --associate-public-ip-address
+
+
+Create EC2 Instance in Private Subnet 
+=====================================
+aws ec2 run-instances --image-id ami-0937dcc711d38ef3f --count 1 --instance-type t2.micro --key-name test-key --security-group-ids sg-af7a50c8 --subnet-id subnet-3b839262 --associate-public-ip-address
