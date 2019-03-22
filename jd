@@ -1,0 +1,53 @@
+=====
+Working Knowledge on AWS Public Cloud Platform.
+Exposure to Multiple service Like EC2, IAM, AMI, VPC, S3, RDS, EBS, ELB, Auto-Scaling & CloudWatch.
+Creation of security groups, s3 lifecycle policy, cross region replication, S3 Buckets and providing access via Bucket Policy.
+Implemented VPC with public and Private Subnet and maintaining the route table, internet gateway, Nat Instances within the VPC for 3 Tier Web Applications.
+Maintaining and Troubleshooting of EC2 services like launching instances as per project requirement, attaching and expending volumes, configuring security group and Creating IAM rules with required policies.
+Monitoring multiple EC2 instance & EBS Volume using metrics like CPU Utilization, disk read/write operation and network performance va Cloud Watch.
+
+
+3+ years of experience into Systems Administration and Cloud Operations, 
+
+Unix/Linux Admin : 
+	Creating Screens on Linux server for running multiple process in parallel.
+https://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/
+•	Perform Patching using Yum utility & VMware tool upgrade on Quarterly Basis.
+https://www.tecmint.com/20-linux-yum-yellowdog-updater-modified-commands-for-package-mangement/
+•	User Management: Create, Modify,& troubleshoot user access related Issue. 
+https://www.tecmint.com/delete-remove-a-user-account-with-home-directory-in-linux/
+•	Disk space management, systems tune up to make sure of the optimum level of the performance.
+
+Linux Kdump configration
+https://www.thegeekdiary.com/centos-rhel-6-how-to-configure-kdump/
+•	Troubleshooting on filesystem issues and Modifying File Ownership and Permissions
+https://www.tecmint.com/fsck-repair-file-system-errors-in-linux/
+    Implementing Password less authentication on RHEL.
+	https://www.thegeekdiary.com/centos-rhel-how-to-setup-passwordless-ssh-login/
+•	Configure Network Interface and Bonding configuration on RHEL 6
+https://www.tecmint.com/create-nic-channel-bonding-in-redhat-centos-fedora/
+    Troubleshooting Linux Boot Level issue like Kernal Panic and File system corruption.
+	https://www.tecmint.com/find-and-fix-linux-boot-issues/
+    Troubleshooting on various UNX OS & hardware related issues like high CPU, memory utilization, disk, power supply & memory failures.
+	https://www.tecmint.com/command-line-tools-to-monitor-linux-performance/
+•	Hand on Experience with LVM & RAID ( Create, Extend, Reduced & Remove )
+https://linuxconfig.org/linux-lvm-logical-volume-manager
+https://www.tecmint.com/understanding-raid-setup-in-linux/
+
+Hand on on manging NFS on linux-boot-issues
+https://www.thegeekdiary.com/centos-rhel-7-configuring-an-nfs-server-and-nfs-client/
+•	Installing, configuring & troubleshooting  of Apache webserver and Java based Applications.
+https://www.digitalocean.com/community/tutorials/apache-basics-installation-and-configuration-troubleshooting
+    Knowledge of Multipathing in Linux .
+	https://sysadminxpert.com/how-to-update-java-version-from-1-7-to-1-8-in-linux/
+	
+    Experience in performing IMM/ILO administration, experience in performing firmware upgrade on servers.
+	IPMI - Intelligent Platform Management Interface ( General Standard )
+IDRAC - Integrated Dell Remote Access ( Dell )
+ILO - Integrated Lights-Out ( HP )
+IMM - Integrated Management Module ( IBM )
+
+    Work with vendors like HP & Oracle in coordinating hardware replacement changes.
+	
+    Configuring Probes for Monitoring Production Server Via Nagios.
+	https://www.tecmint.com/install-nagios-in-linux/
