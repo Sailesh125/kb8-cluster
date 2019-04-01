@@ -1,6 +1,6 @@
-FROM 805276130606.dkr.ecr.eu-central-1.amazonaws.com/base-image-debian:stretch-jre8-1
+FROM 1234567899.dkr.ecr.eu-central-1.amazonaws.com/base-image-debian:stretch-jre8-1
 #Location from where you will download the base Image
-MAINTAINER DL-MDC-DC-DE-MICROSERVICE-NEXTGEN@xyz.com
+MAINTAINER satyam@xyz.com
 #DL of your Team who will manage this file
 # setup group and user, initialize home
 RUN addgroup -gid 30002 satyam-ms && \
