@@ -17,3 +17,18 @@ USER satyam-ms
 WORKDIR app
 
 ENTRYPOINT exec java $JAVA_OPTS -jar ./satyam-ms.jar
+
+
+# Pull base image
+From tomcat:8-jre8
+
+# Maintainer
+MAINTAINER "email2satyam88@gmail.com"
+
+ADD makemyplan.jar /usr/local/tomcat/webapps
+RUN chown -R makemyplan /usr/local/tomcat/webapps
+USER makemyplan
+CMD "catalina.sh" "run"
+EXPOSE 8080
+
+
